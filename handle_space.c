@@ -65,7 +65,7 @@ static	char	*handle_spaces_d(char *s, t_flag *f)
 	char	*ret;
 	short	neg;
 
-	if (!f->n && s[0] != '-' && f->ch != '0')
+	if (!f->n && s[0] != '-' && f->ch != '0' && !f->min)
 		return (ft_strjoin(" ", s));
 	neg = 0;
 	if (s[0] == '-' && f->ch == '0')
